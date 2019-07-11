@@ -74,5 +74,19 @@ git remote add [shortname] [url]
 
 git remote rm [shortname]
 
+#### 5.撤销git commit 的错误提交(合并两次commit为一次)
 
+###### 1.错误commit
+
+git commit -m "this is error commit"
+
+###### 2.查看commit版本
+
+git log ==> 得到commit_hash
+
+###### 3.退回到上一个commit(重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变 )
+
+git reset [commit_hash] 
+
+4.重新add+commit
 
